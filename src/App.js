@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import DataBlock from './Components/DataBlock';
+import ErrorBlock from './Components/ErrorBlock';
+import LoadingBlock from './Components/LoadingBlock';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DataBlock url="http://localhost:7070/data" />
+      <ErrorBlock url="http://localhost:7070/error" />
+      <LoadingBlock url="http://localhost:7070/loading" />
     </div>
   );
 }
